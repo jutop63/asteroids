@@ -6,13 +6,22 @@ from constants import *
 
 def main():
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-    ingame = True
-    while ingame:
+    clock = pygame.time.Clock()
+
+    dt = 0
+    running = True 
+    while running:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
+            
+
         screen.fill
+
+
         pygame.display.flip
+        dt = clock.tick(60)/1000
+        
     
     print("Starting Asteroids!")
     print(f"Screen width: {SCREEN_WIDTH}")
